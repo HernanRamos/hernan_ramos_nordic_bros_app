@@ -1,0 +1,16 @@
+h1{
+  text-align: start;}
+
+img {
+  width: 40px;
+  text-align: center;}
+
+li{
+  list-style: none;
+  width: 150px;
+  text-align: center;}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;}
