@@ -7,11 +7,9 @@ export const NavBar = () => (
   {/* -- SECCIONES -- */}
   <nav>
     <ul>
-      <li><a href="#">INICIO</a></li>
-      <li><a href="#">PRODUCTOS</a></li>
-      <li><a href="#">QUIENES SOMOS</a></li>
-      <li><a href="#">CONTACTO</a></li>
-      <li><a href="#">MAYORISTAS</a></li>
+      <li><a href="/">INICIO</a></li>
+      <li><a href="/category/bidones">BIDONES</a></li>
+      <li><a href="/category/barras">BARRAS</a></li>
       <CartWidget />
     </ul>
   </nav>

@@ -2,6 +2,7 @@
 {
 "id":"0",
 "nombre":"BIDON BLACK",
+"category":"bidones",
 "color":"NEGRO",
 "precio":"4500",
 "img":"/1A.png"
@@ -9,6 +10,7 @@
 {
 "id":"1",
 "nombre":"BIDON PURPLE",
+"category":"bidones",
 "color":"VIOLETA",
 "precio":"4500",
 "img":"/2A.png"
@@ -16,6 +18,7 @@
 {
 "id":"2",
 "nombre":"BIDON NEON",
+"category":"bidones",
 "color":"AMARILLO",
 "precio":"4500",
 "img":"/3A.png"
@@ -23,6 +26,7 @@
 {
 "id":"3",
 "nombre":"BIDON PINK",
+"category":"bidones",
 "color":"ROSA",
 "precio":"4500",
 "img":"/4A.png"
@@ -30,6 +34,7 @@
 {
 "id":"4",
 "nombre":"BIDON CAMEL",
+"category":"bidones",
 "color":"BEIGE",
 "precio":"4500",
 "img":"/5A.png"
@@ -37,6 +42,7 @@
 {
 "id":"5",
 "nombre":"BARRAS ENERGETICAS",
+"category":"barras",
 "color":"",
 "precio":"5000",
 "img":"/Promo_King.png"

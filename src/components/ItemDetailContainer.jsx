@@ -1,20 +1,25 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import data from "../data/products.json";
 import { ItemDetail } from "./ItemDetail";
 import { Container } from "react-bootstrap";
 
-export const ItemListDetailContainer = (props) => {
+export const ItemDetailContainer = (props) => {
 const [product,setProduct] = useState ([]);
+const { id } = useParams();
 useEffect(() => {
 const promise = new Promise((resolve, reject) => {
-    setTimeout(() => resolve(data[0]), 3000);
+    setTimeout(() => {
+        const productById = data.find(product => product.id === id);
+        resolve(productById)}, 1000);
 });
 promise.then((data) => setProduct(data));
 },[])
-if (!product) return <div>Loading...</div>;
-    return ( 
+if (!product) return <div style={{ color: 'black' }}>Loading...</div>;
+
+return ( 
     <Container>
-      <div>DETALLE</div>
+    <h2>DESCRIPCION</h2>
        <ItemDetail product={product}/>
     </Container>
     );}
