@@ -5,7 +5,8 @@
 "category":"bidones",
 "color":"NEGRO",
 "precio":"4500",
-"img":"/1A.png"
+"img":"/1A.png",
+"stock":"15"
 },
 {
 "id":"1",
@@ -13,7 +14,8 @@
 "category":"bidones",
 "color":"VIOLETA",
 "precio":"4500",
-"img":"/2A.png"
+"img":"/2A.png",
+"stock":"15"
 },
 {
 "id":"2",
@@ -21,7 +23,8 @@
 "category":"bidones",
 "color":"AMARILLO",
 "precio":"4500",
-"img":"/3A.png"
+"img":"/3A.png",
+"stock":"15"
 },
 {
 "id":"3",
@@ -29,7 +32,8 @@
 "category":"bidones",
 "color":"ROSA",
 "precio":"4500",
-"img":"/4A.png"
+"img":"/4A.png",
+"stock":"15"
 },
 {
 "id":"4",
@@ -37,7 +41,8 @@
 "category":"bidones",
 "color":"BEIGE",
 "precio":"4500",
-"img":"/5A.png"
+"img":"/5A.png",
+"stock":"15"
 },
 {
 "id":"5",
@@ -45,7 +50,7 @@
 "category":"barras",
 "color":"",
 "precio":"5000",
-"img":"/Promo_King.png"
-}
-    
+"img":"/Promo_King.png",
+"stock":"5"
+}   
 ]

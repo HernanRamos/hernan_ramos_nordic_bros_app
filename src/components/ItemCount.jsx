@@ -1,25 +1,21 @@
 import { useState } from "react";
 
-const stockDisponible = 10;
 
-export const ItemCount = () => {
+
+export const ItemCount = ({onAdd, stock}) => {
     const [count, setCount] = useState(1);
-    const menosCount = () => {
+    const handleDecreaseCount = () => {
         if (count > 1){setCount(prev => prev - 1);};}
-    const masCount = () => {
-        if (stockDisponible > count){setCount(prev => prev + 1);};}
-    const onAdd = () => {
-        alert(count)}
-
-
+    const handleIncreaseCount = () => {
+        if (stock > count){setCount(prev => prev + 1);};}
 
 
    return (
     <div className="span2">
-        <span onClick={menosCount}>-</span>
+        <span onClick={handleDecreaseCount}>-</span>
         <span>{count}</span>
-        <span onClick={masCount}>+</span>
-        <button onClick={onAdd}>COMPRAR</button>
+        <span onClick={handleIncreaseCount}>+</span>
+        <button onClick={() => onAdd(count)}>COMPRAR</button>
     </div>
    );
 };

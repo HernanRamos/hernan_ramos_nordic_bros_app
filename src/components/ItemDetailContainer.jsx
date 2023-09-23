@@ -5,7 +5,7 @@ import { ItemDetail } from "./ItemDetail";
 import { Container } from "react-bootstrap";
 
 export const ItemDetailContainer = (props) => {
-const [product,setProduct] = useState ([]);
+const [product,setProduct] = useState (null);
 const { id } = useParams();
 useEffect(() => {
 const promise = new Promise((resolve, reject) => {
@@ -15,7 +15,8 @@ const promise = new Promise((resolve, reject) => {
 });
 promise.then((data) => setProduct(data));
 },[])
-if (!product) return <div style={{ color: 'black' }}>Loading...</div>;
+if (!product) return <div style={{ color: 'black', fontSize: '50px' }}>Loading...</div>;
+
 
 return ( 
     <Container>

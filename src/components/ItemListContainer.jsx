@@ -21,7 +21,7 @@ if (!id){
   setProducts(productsFiltered);
 }
   });
-},[])
+},[id])
     return ( 
     <Container>
       <div>{props.greeting}</div>

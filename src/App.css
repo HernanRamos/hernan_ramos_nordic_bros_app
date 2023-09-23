@@ -35,10 +35,8 @@ span{color:white;margin-right:1%;}
 .span2 span {color:black;}
 
 .container div{
-   
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
-}
+    align-items: stretch;}
