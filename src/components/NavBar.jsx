@@ -1,11 +1,11 @@
 import { CartWidget } from "./CartWidget"
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom"
+import logo from "../assets/img/logo_completo.png"
 
 export const NavBar = () => (
  <header>
-  {/* -- LOGO -- */}
   <h1>NORDIC BROS</h1>
-  {/* -- SECCIONES -- */}
+  <img alt="logo_completo" src={logo} className="logo" />
   <nav>
     <ul>
      <li><NavLink to="/">INICIO</NavLink></li>

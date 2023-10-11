@@ -1,5 +1,13 @@
-h1{ margin-left:1%;text-align: start;color:white;}
+h1{display: none;}
 
+
+/*---FONTS---*/
+@font-face{ font-family: "ArialBlack";src: url(./assets/fonts/arial/ariblk.ttf)}
+@font-face{ font-family: "Sans";src: url(./assets/fonts/sans/LEMONMILK-Medium.otf)}
+@font-face{ font-family: "SansB";src: url(./assets/fonts/sans/LEMONMILK-Bold.otf)}
+
+/*---HEADER---*/
+.logo{width:180px;}
 header{
     width: 100%;
     min-height: 10vh;
@@ -9,7 +17,6 @@ header{
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;}
-
 ul{
 margin:0%;
 padding: 0%;
@@ -19,24 +26,142 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: flex-end;}
-
 li{
 width: 150px;
 text-align: center;
-font-family:  Arial, Helvetica, sans-serif;
+font-family:"ArialBlack";
 font-style: bold 20px  ;
 font-size: 14.5px;}
-
-a{text-decoration: none;color: white;&:hover {color: black;transition: 0.3s;}}
-
+a{
+width:80px;
+text-decoration: none;
+color: white;
+&:hover {color: black;transition: 0.3s;}}
 img{width:35px}
 
-span{color:white;margin-right:1%;}
-.span2 span {color:black;}
-
-.container div{
+/*---ITEM---*/
+.card{width: 300px!important }
+.card-text{margin:0%;}
+.card-body{
+    padding: 3.5% 3.5% 0% 3.5%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;}
+    flex-direction: column;}
+.img_card{width: 300px;}
+.bidones_space{ margin-left:0.5%;  border: 1px solid #c8c8c8;;}
+.container {padding: 2%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;}
+.h3_productos{text-align: start;
+    font-family:"SansB";
+    font-size: 20px;
+    color:black;}
+.h4_productos{padding: 1% 0% 2.5% 0%;
+    text-align: start;
+    font-family:"Sans";
+    font-size: 22px;
+    color:black;}
+.parrafo_productos{ font-family:"SansL";
+    font-size: 12px;
+    color: black;}
+.button_bd{ 
+    margin: 1.5% 0% 0% 70%;
+    font-family:"Sans";
+    font-size: 15px;
+    background-color: #c8c8c8;
+    border: 0;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color:black;
+    &:hover {background-color: black;color:white; transition: 0.3s;}}
+.button_br{margin-top:2.5%;}
+/*BARRAS*/
+h2{
+    padding-top: 1%;
+    text-align: center;
+    font-family:"SansB";
+    font-size: 25px;
+    color:black;}
+
+/*---ITEM COUNT---*/
+
+span{color:white;margin-right:1%;}
+.span2 span {color:black; display: inline;}
+
+
+/*---CART---*/
+
+/*FORMULARIO*/
+.form{
+    margin: auto;
+    margin-top:8%;
+    margin-bottom:20%;
+    padding: 20px;
+    width: 800px;
+    height:570px;
+    background-color: #8cb4bf;
+    border-radius: 15px;
+    box-sizing: border-box;
+     .title{
+     color: white;
+     font-family: "SansB";
+     text-align: center;
+     font-size: 30px;
+     font-weight: 600;
+     margin-top: 8px;}
+     .subtitle{
+     color: white;
+     font-family:"SansB";
+     text-align: center;
+     font-size: 16px;
+     font-weight: 600;
+     margin-top: 8px;}
+     .input-container{
+     height: 50px;
+     position: relative;
+     width: 100%;}
+     .ic1{margin-top: 40px;}
+     .ic2{margin-top: 30px;}
+     .input{
+     background-color: #dfdfdf;
+     border-radius: 12px;
+     border: 0;
+     box-sizing: border-box;
+     color: black;
+     font-size: 18px;
+     height: 100%;
+     outline: 0;
+     padding: 4px 20px 0;
+     width: 100%;}
+     .button{
+     height: 110px;
+     display: flex;
+     justify-content: center;
+     align-items: center;}
+     .submit{
+     text-decoration: none;
+     border-radius: 15px;
+     background-color: #b9b9b9;
+     z-index: 0;
+     border:0;
+     box-sizing: border-box;
+     color:white;
+     font-family:"SansB";
+     font-size: 20px;
+     padding: 10px 340px;
+     position: absolute;
+     overflow:hidden;}
+     .submit:before {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     background-color: #8a8a8a;
+     z-index: -1;
+     transform: translateX(-100%);
+     transition: all 1s;}
+     .submit:hover:before {
+     transform: translateX(0);}}
