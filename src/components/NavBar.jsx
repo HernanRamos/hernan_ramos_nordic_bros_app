@@ -4,7 +4,7 @@ import logo from "../assets/img/logo_completo.png"
 
 export const NavBar = () => (
  <header>
-  <h1>NORDIC BROS</h1>
+  <h1></h1>
   <img alt="logo_completo" src={logo} className="logo" />
   <nav>
     <ul>

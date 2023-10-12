@@ -10,9 +10,9 @@ export const ItemCount = ({ onAdd, stock }) => {
         if (stock > count){setCount(prev => prev + 1);};}
 
    return (
-    <div className="span2">
-        <span onClick={ handleDecreaseCount }>-</span>
+    <div className="item_count">
+        <button className="button_count1"onClick={ handleDecreaseCount }>-</button>
         <span>{ count }</span>
-        <span onClick={ handleIncreaseCount }>+</span>
-        <button onClick={() => onAdd(count)}>COMPRAR</button>
+        <button className="button_count1"onClick={ handleIncreaseCount }>+</button>
+        <button className="button_count2"onClick={() => onAdd(count)}>COMPRAR</button>
     </div>);}

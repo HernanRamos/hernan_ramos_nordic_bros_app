@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect } from "react";
+import { Table } from "react-bootstrap";
 import { CartContext } from "../contexts/CartContext";
 import { getFirestore, collection, addDoc} from "firebase/firestore";
 import { ToastContainer, toast } from 'react-toastify';
@@ -39,73 +40,75 @@ export const Cart = () => {
                 
   return (
 <>
-    <h1 style={{ color: "red"}}>Cart</h1>
+    <h2 className="h2_table">COMPRAS</h2>
     {items.length > 0 ? (
     <>
-      <table>
-            <thead>
+      <Table>
+            <thead className="td_head">
                 <tr>
-                    <th>NOMBRE</th>
                     <th></th>
+                    <th>NOMBRE</th>
                     <th>PRECIO</th>
                     <th>CANTIDAD</th>
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="td_body">
                 {items.map(item => (
                  <tr key={item.id}>
+                    <td><img className="img_table" src={item.img} alt="imagen_producto" /></td>
                     <td>{item.nombre}</td>
                     <td>{item.precio}</td>
                     <td>{item.quantity}</td>
                     <td>
-                        <button onClick={() => removeItem(item.id)}>ELIMINAR</button>
+                        <button className="button_table" onClick={() => removeItem(item.id)}>X</button>
                     </td>
                 </tr>
                  ))}
             </tbody>
-            <tfoot>
-                <div>TOTAL</div>
-                <div>{total()}</div>
+            <tfoot className="td_head">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TOTAL</td>
+                <td>${total()}</td>
             </tfoot>
-      </table>
-      <form class="form" onSubmit={handleComprar}>
-            <div class="title">Ingresar datos de comprador</div>
-            <div class="subtitle">Haz tu consulta!</div>
-            <div class="input-container ic1">
+      </Table>
+      <form className="form" onSubmit={handleComprar}>
+            <div className="title">Datos de Comprador</div>
+            <div className="subtitle">Tu orden ya esta casi lista!</div>
+            <div className="input-container ic1">
                 <input
                 onChange={handleChange}
                 value= {formValues.nombre}
-                class="input"
+                className="input"
                 name="nombre"
                 type="text"
                 placeholder="Nombre y Apellido" />
             </div>
-            <div class="input-container ic2">
+            <div className="input-container ic2">
                 <input
                 onChange={handleChange}
                 value= {formValues.telefono}
-                class="input"
+                className="input"
                 name="telefono"
                 type="text"
                 placeholder="Telefono" />
             </div>
-            <div class="input-container ic2">
+            <div className="input-container ic2">
                 <input
                 onChange={handleChange}
                 value= {formValues.email}
-                class="input" 
+                className="input" 
                 name="email"
                 type="text" 
                 placeholder="Email" />
             </div>
-            <div class="button">
-                <button id="submit" class="submit" type="submit">COMPRAR</button>
+            <div className="button">
+                <button id="submit" className="submit" type="submit">FINALIZAR COMPRA!</button>
                 <ToastContainer/>
             </div>
-      </form>
-                
+      </form>        
     </>
-    ) : (<p>No hay items en el carrito.</p>)}
-</>
-  )}
+    ) : (<p className="msj_vacio">EL CARRITO ESTA VACIO 🛒</p>)}
+</>)}
